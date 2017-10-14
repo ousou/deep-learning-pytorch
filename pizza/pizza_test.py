@@ -14,8 +14,8 @@ Xtrain, Ytrain, Xtest, Ytest =  load_pizza_data()
 N, dim = np.shape(Xtrain)
 #Ytrain = np.reshape(Ytrain,(-1,1))
 #Ytest = np.reshape(Ytest,(-1,1))
-print np.shape(Ytrain)
-print np.shape(Ytest)
+print(np.shape(Ytrain))
+print(np.shape(Ytest))
 
 '''
 STEP 2: MAKING DATASET ITERABLE
@@ -34,7 +34,7 @@ batch_size = 100
 n_iters = 10000
 num_epochs = n_iters / (len(train_dataset) / batch_size)
 num_epochs = int(num_epochs)
-print num_epochs
+print(num_epochs)
 
 train_loader = torch.utils.data.DataLoader(dataset=train_dataset, 
                                            batch_size=batch_size, 
