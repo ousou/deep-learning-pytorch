@@ -26,6 +26,7 @@ train_dataset = FashionMNIST(root='../data/fashionmnist',
                                  resize,
                                  transforms.ToTensor(),
                                  normalize,
+                                 # Repeat grayscale input to all RGB channels, since pretrained model expects RGB image
                                  lambda x: x.repeat(3, 1, 1)
                              ]
                              ),
@@ -37,6 +38,7 @@ test_dataset = FashionMNIST(root='../data/fashionmnist',
                                 resize,
                                 transforms.ToTensor(),
                                 normalize,
+                                # Repeat grayscale input to all RGB channels, since pretrained model expects RGB image
                                 lambda x: x.repeat(3, 1, 1)
                             ]
                             ),
@@ -44,8 +46,6 @@ test_dataset = FashionMNIST(root='../data/fashionmnist',
 
 print('Number of train samples: ', len(train_dataset))
 print('Number of test samples: ', len(test_dataset))
-# img, target =  test_dataset[0]
-# print('First image', img)
 
 batch_size = 100
 n_iters = 3000
