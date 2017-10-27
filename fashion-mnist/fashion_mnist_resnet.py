@@ -76,6 +76,8 @@ class ResNetForMNIST(nn.Module):
 
 model = ResNetForMNIST()
 
+if torch.cuda.is_available():
+    model.cuda()
 print('model', model)
 
 criterion = nn.CrossEntropyLoss()
