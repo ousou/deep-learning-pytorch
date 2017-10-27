@@ -107,8 +107,8 @@ output_dim = 2
 hidden_dim = 20
 # hidden_layers_count = 3
 
-#model = FeedforwardNeuralNetModel(input_dim, hidden_dim, output_dim)
-model = LogisticRegressionModel(input_dim, output_dim)
+model = FeedforwardNeuralNetModel(input_dim, hidden_dim, output_dim)
+# model = LogisticRegressionModel(input_dim, output_dim)
 
 #######################
 #  USE GPU FOR MODEL  #
