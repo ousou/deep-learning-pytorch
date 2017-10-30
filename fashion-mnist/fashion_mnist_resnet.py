@@ -47,10 +47,9 @@ test_dataset = FashionMNIST(root='../data/fashionmnist',
 print('Number of train samples: ', len(train_dataset))
 print('Number of test samples: ', len(test_dataset))
 
-batch_size = 100
+batch_size = 50
 n_iters = 3000
-num_epochs = n_iters / (len(train_dataset) / batch_size)
-num_epochs = int(num_epochs)
+num_epochs = 10
 
 train_loader = torch.utils.data.DataLoader(dataset=train_dataset,
                                            batch_size=batch_size,
